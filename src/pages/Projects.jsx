@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 function Projects() {
   return <div>Projects</div>;

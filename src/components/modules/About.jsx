@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Button from "../common/Button";
+import CallAction from "../common/CallAction";
 import USER from "../../mock/about.json";
 
 function About() {
@@ -83,8 +83,8 @@ function About() {
             />
           </div>
           <div className="w-full py-6 flex gap-5 items-center justify-center md:justify-start">
-            <Button label="LinkedIn" link={USER.linkedin} />
-            <Button label="Resume" link={USER.resume} />
+            <CallAction label="LinkedIn" link={USER.linkedin} />
+            <CallAction label="Resume" link={USER.resume} />
           </div>
         </motion.div>
       </div>

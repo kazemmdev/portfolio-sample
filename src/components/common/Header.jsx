@@ -10,8 +10,8 @@ function Header() {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           type: "spring",
-          delay: 0.8,
-          duration: 1,
+          delay: 0.6,
+          duration: 0.8,
         }}
         className="w-full flex items-center justify-between p-6 h-20 gap-2"
       >

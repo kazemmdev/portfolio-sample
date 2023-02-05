@@ -10,7 +10,7 @@
 
 .action-btn,
 .action-btn-shadow {
-  @apply text-white flex items-center justify-center cursor-pointer h-14 w-36 text-center rounded-full;
+  @apply relative text-white flex items-center justify-center cursor-pointer h-14 w-36 text-center rounded-full;
   background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
   animation: grandient 20s linear infinite;
   background-size: 600%;
