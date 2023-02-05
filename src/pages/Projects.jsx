@@ -26,7 +26,7 @@ function Projects() {
           ))}
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3  gap-6 md:flex-row flex-col">
-          {PROJECTS.slice(2,-1).map((item) => (
+          {PROJECTS.slice(2, -1).map((item) => (
             <ProjectBox key={item.id} project={item} />
           ))}
         </div>
