@@ -15,9 +15,9 @@ function Intro() {
         {USER.name}
       </motion.h2>
       <motion.div
-        initial={{ x: -200, opacity: 0 }}
+        initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 1 }}
+        transition={{ ease: "easeOut", duration: 0.7 }}
         className="text-5xl pt-3 leading-snug font-light"
       >
         {USER.title}
