@@ -17,7 +17,7 @@ function About() {
         <motion.div
           initial={{ y: 80, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ amount: 1, once: true }}
+          viewport={{ amount: 0.2, once: true }}
           transition={{ ease: "easeOut", duration: 0.6 }}
         >
           <h3 className="text-3xl py-3 leading-snug text-center md:text-left">
@@ -26,7 +26,7 @@ function About() {
           <p className="text-xl text-slate-700 leading-snug text-center md:text-left">
             {USER.bio}
           </p>
-          <div className="flex gap-2 pt-4 justify-center md:justify-start">
+          <div className="flex gap-2 pt-6 justify-center md:justify-start">
             <motion.img
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -82,9 +82,23 @@ function About() {
               alt="css"
             />
           </div>
-          <div className="w-full py-6 flex gap-5 items-center justify-center md:justify-start">
-            <CallAction label="LinkedIn" link={USER.linkedin} />
-            <CallAction label="Resume" link={USER.resume} />
+          <div className="w-full py-10 flex gap-5 items-center justify-center md:justify-start">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 1, once: true }}
+              transition={{ type: "spring", duration: 0.6, delay: 0.6 }}
+            >
+              <CallAction label="LinkedIn" link={USER.linkedin} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 1, once: true }}
+              transition={{ type: "spring", duration: 0.6, delay: 0.7 }}
+            >
+              <CallAction label="Resume" link={USER.resume} />
+            </motion.div>
           </div>
         </motion.div>
       </div>

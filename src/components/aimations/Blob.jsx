@@ -1,46 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { spline } from "@georgedoescode/spline";
-import { createNoise2D } from "simplex-noise";
 import { motion } from "framer-motion";
+import { createPoints, map, noise } from "../../utils/helpers";
 
-const createPoints = () => {
-  const points = [];
-  const numPoints = 6;
-  const angleStep = (Math.PI * 2) / numPoints;
-  const rad = 75;
-
-  for (let i = 1; i <= numPoints; i++) {
-    const theta = i * angleStep;
-    const x = 100 + Math.cos(theta) * rad;
-    const y = 100 + Math.sin(theta) * rad;
-
-    points.push({
-      x: x,
-      y: y,
-      originX: x,
-      originY: y,
-      noiseOffsetX: Math.random() * 1000,
-      noiseOffsetY: Math.random() * 1000,
-    });
-  }
-
-  return points;
-};
-
-const map = (n, start1, end1, start2, end2) => {
-  return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
-};
-
-const noise = (x, y) => {
-  let noise = new createNoise2D();
-  return noise(x, y);
-};
-
-function Blob() {
+function Blob({ uid }) {
   const ref = useRef();
   const [hue, setHue] = useState();
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [scale, setScale] = useState(0);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   function animate(points) {
     const path = ref.current;
@@ -69,7 +36,7 @@ function Blob() {
     });
 
     setHue(map(n, -1, 1, 0, 360));
-    setScale(map(n, -1, 1, 0, 5));
+    setScale(map(n, -1, 1, 0, 4));
 
     animate(createPoints());
   }, []);
@@ -90,12 +57,12 @@ function Blob() {
         width="300"
       >
         <defs>
-          <linearGradient id="gradient" gradientTransform="rotate(80)">
+          <linearGradient id={"gradient_" + uid} gradientTransform="rotate(80)">
             <stop offset="0%" stopColor={`hsl(${hue}, 100%, 75%)`} />
             <stop offset="100%" stopColor={`hsl(${hue + 60}, 100%, 75%)`} />
           </linearGradient>
         </defs>
-        <path ref={ref} d="" fill="url('#gradient')" />
+        <path ref={ref} d="" fill={`url('#gradient_${uid}')`} />
       </motion.svg>
     </motion.div>
   );
