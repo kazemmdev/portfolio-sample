@@ -1,17 +1,47 @@
 [
   {
     "id": 1,
-    "title": "INTERACTIVE RETAIL INSTALLATION",
+    "title": "Intractive Retail Installation",
     "image": "/image/proj_retail.png"
   },
   {
     "id": 2,
-    "title": "FINCH OUTDOORS BRANDING",
+    "title": "Finch Outdoors Branding",
     "image": "/image/proj_finch.png"
   },
   {
     "id": 3,
-    "title": "FAMILY OF EATERIES APP",
+    "title": "Family of Eateries App",
     "image": "/image/proj1.png"
+  },
+  {
+    "id": 4,
+    "title": "Climate Change Infographic Video",
+    "image": "/image/climate_cover.png"
+  },
+  {
+    "id": 5,
+    "title": "Intractive Story Website",
+    "image": "/image/sandwich_cover.png"
+  },
+  {
+    "id": 6,
+    "title": "Digital Signage",
+    "image": "/image/display_cover.png"
+  },
+  {
+    "id": 7,
+    "title": "Aurora Snowboards Branding",
+    "image": "/image/proj2.png"
+  },
+  {
+    "id": 8,
+    "title": "PS5 Product Video",
+    "image": "/image/proj_PS5.png"
+  },
+  {
+    "id": 9,
+    "title": "Photography",
+    "image": "/image/proj_photography.png"
   }
 ]

@@ -22,6 +22,7 @@ function Contact() {
         </p>
       </motion.div>
       <motion.form
+        onSubmit={submitHandler}
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeOut", duration: 0.6, dely: 0.4 }}

@@ -24,9 +24,9 @@ function ProjectBox({ project }) {
           transition={{ ease: "easeOut" }}
         />
       </div>
-      <motion.h4
+      <motion.div
         variants={textVariants}
-        className="flex items-start gap-2 text-lg text-slate-800 leading-6 pt-2"
+        className="flex items-start gap-2 leading-6 pt-2"
       >
         <svg width="10" height="30" viewBox="0 -9 3 24">
           <path
@@ -37,8 +37,8 @@ function ProjectBox({ project }) {
             strokeLinecap="round"
           ></path>
         </svg>
-        {project.title}
-      </motion.h4>
+        <h4 className="text-lg text-slate-800 font-medium">{project.title}</h4>
+      </motion.div>
     </motion.div>
   );
 }

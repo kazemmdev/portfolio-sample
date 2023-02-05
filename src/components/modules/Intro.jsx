@@ -35,7 +35,7 @@ function Intro() {
       >
         <h3 className="text-3xl pt-3 leading-snug">Latest Projects</h3>
         <div className="flex items-center justify-between gap-5 flex-col md:flex-row md:items-start">
-          {PROJECTS.splice(0, 3).map((item) => (
+          {PROJECTS.slice(0, 3).map((item) => (
             <ProjectBox project={item} key={item.id} />
           ))}
         </div>
